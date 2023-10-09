@@ -1,0 +1,25 @@
+Bundle-Name: uae-pass-module
+Bundle-SymbolicName: com.uae.pass
+Bundle-Version: 1.0.0
+Export-Package: \
+	com.uae.pass.constants,\
+	com.uae.pass.api,\
+	com.uae.pass.model,\
+	com.uae.pass.config
+
+Import-Package: \
+!kotlin.*,\
+!android.*,\
+!com.android.*,\
+!dalvik.system,\
+!javax.annotation.meta,\
+!kotlin.internal.jdk7,\
+!kotlin.internal.jdk8,\
+!kotlin.reflect.jvm.internal,\
+!org.conscrypt,\
+!org.openjsse.javax.net.ssl,\
+!org.openjsse.net.ssl,\
+!org.xmlpull.v1,\
+!sun.security.ssl,\
+*
+-fixupmessages "Classes found in the wrong directory"; restrict:=error; is:=warning

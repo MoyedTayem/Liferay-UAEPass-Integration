@@ -126,9 +126,9 @@ public class UAEPassAutoLogin  implements AutoLogin {
 
                 // default site assignment
                 Group group=groupLocalService.fetchGroup(user.getCompanyId(),configuration.defaultSiteAssignment());
-                _userLocalservice.addGroupUser(group.getGroupId(),user);
+                _userLocalservice.addGroupUser(20119,user);
 
-                httpServletRequest.setAttribute("AUTO_LOGIN_REDIRECT_AND_CONTINUE", userRedirect);
+                httpServletRequest.setAttribute("AUTO_LOGIN_REDIRECT_AND_CONTINUE", "http://localhost:8080");
 
                 String[] credentials = new String[] {userId, password, passwordEncrypted};
 
@@ -157,7 +157,7 @@ public class UAEPassAutoLogin  implements AutoLogin {
                 String userRedirect = (String) httpServletRequest.getAttribute("CURRENT_URL");
 
 
-                httpServletRequest.setAttribute("AUTO_LOGIN_REDIRECT_AND_CONTINUE", userRedirect);
+                httpServletRequest.setAttribute("AUTO_LOGIN_REDIRECT_AND_CONTINUE", "http://localhost:8080");
 
                 String[] credentials = new String[]{userId, password, passwordEncrypted};
 
@@ -189,6 +189,9 @@ public class UAEPassAutoLogin  implements AutoLogin {
 
         if (Validator.isNull(user)) {
 
+
+
+
             ServiceContext serviceContext = new ServiceContext();
             long groupId = PortalUtil.getScopeGroupId(httpServletRequest);
             serviceContext.setScopeGroupId(groupId);
@@ -216,7 +219,7 @@ public class UAEPassAutoLogin  implements AutoLogin {
             long[] organizationIds = new long[] {};
             long[] roleIds = new long[] {};
             long[] userGroupIds = new long[] {};
-            int type = 0;
+            int type = 1;
 
             long creatorUserId = 0;
             user = _userLocalservice.addUser(creatorUserId,

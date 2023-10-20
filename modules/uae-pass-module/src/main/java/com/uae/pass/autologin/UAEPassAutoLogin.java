@@ -113,13 +113,13 @@ public class UAEPassAutoLogin  implements AutoLogin {
 //                    isProfileCompleted = (boolean) isProfileSetupCompleted;
 
 
-//                boolean isUaePassValidated = false;
-//                if(Validator.isNotNull(emiratesId) && (userInfo.getUserType().equalsIgnoreCase("SOP2") || userInfo.getUserType().equalsIgnoreCase("SOP3"))){
-//                    user.getExpandoBridge().setAttribute(UaePassModulePortletKeys.CUSTOM_FIELD_EMIRATE_ID, emiratesId,false);
-//                    user.getExpandoBridge().setAttribute(UaePassModulePortletKeys.CUSTOM_FIELD_UAE_RESIDENT, true,false);
+                //boolean isUaePassValidated = false;
+                if(Validator.isNotNull(emiratesId) && (userInfo.getUserType().equalsIgnoreCase("SOP2") || userInfo.getUserType().equalsIgnoreCase("SOP3"))){
+                    user.getExpandoBridge().setAttribute(UaePassModulePortletKeys.CUSTOM_FIELD_EMIRATE_ID, emiratesId,false);
+                    user.getExpandoBridge().setAttribute(UaePassModulePortletKeys.CUSTOM_UAE_PASS_VERIFIED, true,false);
 //                    user.getExpandoBridge().setAttribute(UaePassModulePortletKeys.CUSTOM_FIELD_IS_UAE_PASS_VALIDATED,true,false);
 //                    isUaePassValidated = true;
-//                }
+                }
 
 
                // user.getExpandoBridge().setAttribute(UaePassModulePortletKeys.CUSTOM_FIELD_SIGN_WITH_EMAIL, Boolean.FALSE.toString(),false);

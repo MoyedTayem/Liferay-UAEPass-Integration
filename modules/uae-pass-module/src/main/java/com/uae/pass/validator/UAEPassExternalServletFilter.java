@@ -143,7 +143,7 @@ public class UAEPassExternalServletFilter extends BaseFilter {
                         user.setFirstName(fistName);
                         user.setLastName(lastName);
                         _userLocalservice.updateUser(user);
-                        user.getExpandoBridge().setAttribute(UaePassModulePortletKeys.CUSTOM_FIELD_IS_UAE_PASS_VALIDATED,true,false);
+                        user.getExpandoBridge().setAttribute(UaePassModulePortletKeys.CUSTOM_UAE_PASS_VERIFIED,true,false);
                         user.getExpandoBridge().setAttribute(UaePassModulePortletKeys.CUSTOM_FIELD_EMIRATE_ID, emirateId, false);
                         _log.info("Updating users information "+mobileNumber);
                         updateMobilePhone(user, StringPool.BLANK,mobileNumber,true);

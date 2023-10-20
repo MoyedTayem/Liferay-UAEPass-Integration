@@ -21,6 +21,7 @@ public class UaePassModulePortletKeys {
 
     public static final String CONFIGURATION_PID = "com.uae.pass.config.UAEPassConfiguration";
 
+    public static final String CUSTOM_UAE_PASS_VERIFIED="UAEPassVerified";
 
 
     public static final String CUSTOM_FIELD_UAE_RESIDENT = "isUAEResident";

@@ -238,6 +238,11 @@ public class UAEPassAutoLogin  implements AutoLogin {
             user.setEmailAddressVerified(false);
             user = UserLocalServiceUtil.updateUser(user);
 
+        }else{
+            user.setFirstName(firstName);
+            user.setLastName(lastName);
+            user = UserLocalServiceUtil.updateUser(user);
+
         }
 
         return user;
